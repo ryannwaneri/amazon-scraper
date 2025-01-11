@@ -36,5 +36,6 @@ if __name__ == '__main__':
             priced_products.append(product)
         for product in priced_products:
             records.append(extract_prop(product))    
-
-    print(len(records))
+    df=pd.DataFrame(records)
+    df.to_csv(f'{query}_search.csv')
+    print('file saved')
